@@ -3,8 +3,8 @@
 <p>Here are all the things you need to do!</p>
 
 <ul>
-  <% @description.each() do |new_task| %>
-    <li><%= new_task.description() %></li>
+  <% @tasks.each() do |description| %>
+    <li><%= description.description() %></li>
   <% end %>
 </ul>
 

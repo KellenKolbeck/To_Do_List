@@ -1,10 +1,10 @@
-require('sinatra')
-require('sinatra/reloader')
-require('./lib/to_do')
-also_reload('lib/**/*.rb')
+require("sinatra")
+require("sinatra/reloader")
+also_reload("lib/**/*.rb")
+require("./lib/to_do")
 
-get('/') do
-  @description = Task.all()
+get("/") do
+  @tasks = Task.all()
   erb(:index)
 end
 
