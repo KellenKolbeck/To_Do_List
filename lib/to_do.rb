@@ -14,6 +14,11 @@ class Task
   end
 
   define_method(:save) do
-    @@all_description.push(self)
+    @@all_descriptions.push(self)
   end
+
+  define_singleton_method(:clear) do
+    @@all_descriptions = []
+  end
+  
 end
