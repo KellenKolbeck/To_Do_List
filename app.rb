@@ -11,7 +11,7 @@ get("/") do
   erb(:index)
 end
 
-post("/to_do") do
+post("/task") do
   description = params.fetch("description")
   new_task = Task.new(description)
   new_task.save()
